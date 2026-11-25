@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="teamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  <!-- Background Pill -->
+  <rect x="2" y="2" width="196" height="56" rx="28" fill="#111827" stroke="url(#teamGrad)" stroke-width="2" />
+  <!-- Terminal Tag Icon -->
+  <circle cx="28" cy="30" r="14" fill="url(#teamGrad)" />
+  <path d="M24 25 L29 30 L24 35" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="31" y1="35" x2="35" y2="35" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <!-- Text Brand -->
+  <text x="50" y="36" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="18" fill="#ffffff">&lt;Equipo<tspan fill="#38bdf8">Dev</tspan>/&gt;</text>
+</svg>

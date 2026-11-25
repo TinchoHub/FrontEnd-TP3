@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Landing page de presentación de dos propuestas de flujos agénticos para la startup StudyMatch (IFTS 16). TP3 Desarrollo de Sistemas Web Front End - IFTS 29.">
+  <title>StudyMatch. · Dos sentencias, dos soluciones | Grupo 08 · IFTS 29</title>
+  
+  <!-- Favicon & Fuentes -->
+  <link rel="icon" href="./assets/S13.webp" type="image/webp">
+  
+  <!-- Hojas de Estilo Modular -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/flowcharts.css">
+  <link rel="stylesheet" href="./css/components.css">
+  <link rel="stylesheet" href="./css/mejoras.css">
+  <link rel="stylesheet" href="./css/espacial.css">
+</head>
+<body>
+  <script>document.documentElement.classList.add("js")</script>
+  <!-- Enlace accesible de salto -->
+  <a class="skip-link" href="#presentacion">Saltar al contenido principal</a>
+
+  <!-- Header & Navegación -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand-wrapper" aria-label="StudyMatch Inicio">
+        <img src="./assets/S13.webp" alt="Logo de StudyMatch." class="brand-logo-img" width="44" height="44">
+        <div class="brand-info">
+          <span class="brand-name">StudyMatch.</span>
+          <span class="brand-tag">IFTS 16 ➔ <strong>IFTS 29</strong></span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación del Trabajo Práctico">
+        <a href="#presentacion" class="nav-link">Startup</a>
+        <a href="#sentencias" class="nav-link">Lógica</a>
+        <a href="#solucion-r5" class="nav-link">Solución R5</a>
+        <a href="#solucion-r6" class="nav-link">Solución R6</a>
+        <a href="#simulador" class="nav-link">Simulador</a>
+        <a href="#equipo" class="nav-link">Equipo</a>
+        <a href="#rubrica" class="nav-link">Rúbrica</a>
+      </nav>
+
+      <div class="nav-badge-group">
+        <span class="pulse-dot" aria-hidden="true"></span>
+        <span>Grupo 08 · Bloque S13-C</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Hero Section -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span>Trabajo Práctico N.º 3 · Front End · 2do Cuatrimestre 2026</span>
+        </div>
+        
+        <h1 id="hero-heading" class="hero-title">
+          Dos Sentencias.<br>
+          <span class="gradient-text">Dos Soluciones Agénticas.</span>
+        </h1>
+        
+        <p class="hero-subtitle">
+          Transformamos las condiciones lógicas de la startup <strong>StudyMatch.</strong> (creadas en el IFTS 16) en una propuesta interactiva de automatización con agentes de software, control de versiones de agenda y mediación sin fricción.
+        </p>
+
+        <div class="hero-meta-bar">
+          <div class="hero-chip">
+            <span class="hero-chip-icon" aria-hidden="true">🚀</span>
+            <span>Startup: <strong>StudyMatch.</strong></span>
+          </div>
+          <div class="hero-chip">
+            <span class="hero-chip-icon" aria-hidden="true">📑</span>
+            <span>Bloque: <strong>S13-C · Organización y cambios</strong></span>
+          </div>
+          <div class="hero-chip">
+            <span class="hero-chip-icon" aria-hidden="true">🤖</span>
+            <span>Construcción: <strong>100% Agéntica</strong></span>
+          </div>
+          <div class="hero-chip">
+            <span class="hero-chip-icon" aria-hidden="true">👥</span>
+            <span>Equipo: <strong>&lt;EquipoDev/&gt; (Grupo 08)</strong></span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="#solucion-r5" class="btn-primary">
+            <span>Explorar Flujos Agénticos</span>
+            <span aria-hidden="true">↓</span>
+          </a>
+          <a href="#simulador" class="btn-secondary">
+            <span>Ejecutar Simulador Interactivo</span>
+            <span aria-hidden="true">▶</span>
+          </a>
+        </div>
+
+        <figure class="hero-visual">
+          <svg viewBox="0 0 760 220" role="img" aria-labelledby="hv-t hv-d">
+            <title id="hv-t">Constelaciones de versiones</title>
+            <desc id="hv-d">Dos constelaciones: la Versión N acordada, que sigue vigente, y la Versión N+1 en votación, que solo la reemplaza si se cumple R5.</desc>
+            <polyline class="cline" points="40,150 120,98 215,128 305,72 385,100"/>
+            <polyline class="cline dashed" points="450,172 525,128 600,160 668,102 722,128"/>
+            <line class="cline link" x1="385" y1="100" x2="450" y2="172"/>
+            <g class="star" tabindex="0"><circle cx="40" cy="150" r="4"/><title>Se propone el encuentro</title></g><g class="star" tabindex="0"><circle cx="120" cy="98" r="4"/><title>Todos confirman fecha, horario y modalidad</title></g><g class="star" tabindex="0"><circle cx="215" cy="128" r="4"/><title>R5: queda «Acordado»</title></g><g class="star" tabindex="0"><circle cx="305" cy="72" r="4"/><title>Versión N activa y bloqueada</title></g><g class="star" tabindex="0"><circle cx="385" cy="100" r="4"/><title>Sigue vigente hasta que se cumpla R5</title></g><g class="star" tabindex="0"><circle cx="450" cy="172" r="4"/><title>Alguien propone un cambio</title></g><g class="star" tabindex="0"><circle cx="525" cy="128" r="4"/><title>Se solicita la conformidad pendiente</title></g><g class="star" tabindex="0"><circle cx="600" cy="160" r="4"/><title>Faltan aceptaciones: N sigue vigente</title></g><g class="star" tabindex="0"><circle cx="668" cy="102" r="4"/><title>Si todos aceptan, se cumple R5</title></g><g class="star" tabindex="0"><circle cx="722" cy="128" r="4"/><title>N+1 reemplaza a N</title></g>
+            <text x="40" y="190" class="clabel gold">CONSTELACIÓN A · VERSIÓN N (protegida)</text>
+            <text x="450" y="210" class="clabel ice">CONSTELACIÓN B · VERSIÓN N+1 (en votación)</text>
+            <text x="388" y="148" class="clabel mini">R5</text>
+          </svg>
+          <figcaption>Pasá el mouse o el foco por las estrellas: el acuerdo anterior nunca queda en el limbo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sección 01: Presentación de la Startup -->
+    <section class="content-section" id="presentacion" aria-labelledby="section-startup-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 01</span>
+          <h2 id="section-startup-title" class="section-title">La Startup y su Necesidad</h2>
+          <p class="section-description">
+            Conexión colaborativa entre estudiantes de nivel superior: cómo resolver la fricción en la coordinación de horarios y la preservación de compromisos de estudio.
+          </p>
+        </div>
+
+        <article class="startup-card">
+          <div class="startup-logo-frame">
+            <img src="./assets/S13.webp" alt="Logo oficial de StudyMatch." width="220" height="220" loading="eager">
+            <span class="startup-logo-caption">Logo original asignado (S13)</span>
+          </div>
+          
+          <div class="startup-details">
+            <div class="card-tag tag-primary">Startup Asignada · Sorteo Docente</div>
+            <h3>
+              StudyMatch.
+              <span class="startup-badge">Educación & Colaboración</span>
+            </h3>
+            
+            <p class="startup-lead">
+              <strong>StudyMatch.</strong> es una red académica diseñada para que estudiantes conecten según materias, intereses pedagógicos, necesidades de aprendizaje y franjas horarias de disponibilidad.
+            </p>
+
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">
+              <strong>El problema detectado:</strong> Cuando los estudiantes intentan coordinar un grupo de estudio, las conversaciones manuales se dispersan en infinitas cadenas de mensajería ("¿pueden el jueves?", "yo solo de 18 a 20", "cambiémoslo"). Esto produce reuniones canceladas a último momento, solapamientos y la pérdida total de compromisos pactados cuando una sola persona pide cambiar la fecha.
+            </p>
+
+            <div class="startup-props">
+              <div class="prop-item">
+                <span class="prop-label">Origen de la Lógica</span>
+                <span class="prop-value">Estudiantes del IFTS 16</span>
+              </div>
+              <div class="prop-item">
+                <span class="prop-label">Equipo de Front End</span>
+                <span class="prop-value">Grupo 08 (IFTS 29)</span>
+              </div>
+              <div class="prop-item">
+                <span class="prop-label">Bloque Asignado</span>
+                <span class="prop-value">S13-C · Organización y cambios</span>
+              </div>
+              <div class="prop-item">
+                <span class="prop-label">Sentencias Asignadas</span>
+                <span class="prop-value">R5 (Consenso) y R6 (Versiones)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Puente Institucional IFTS 16 + IFTS 29 -->
+        <div class="callout">
+          <h3 class="callout-title">
+            <span aria-hidden="true">💡</span>
+            Puente Colaborativo: Del Razonamiento Lógico a la Interfaz Web
+          </h3>
+          <p>
+            Los estudiantes del <strong>IFTS 16</strong> modelaron formalmente las reglas del negocio mediante lógica proposicional rigurosa. Nuestro grupo de Front End en el <strong>IFTS 29</strong> toma esa especificación para proponer dos flujos agénticos comprensibles, visuales y transparentes, garantizando que el usuario entienda qué ocurre con su agenda en cada instante sin necesidad de un operador humano intermediario.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 02: Desarme Lógico de las Sentencias -->
+    <section class="content-section" id="sentencias" aria-labelledby="section-logic-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 02</span>
+          <h2 id="section-logic-title" class="section-title">Desarme Lógico de las Sentencias</h2>
+          <p class="section-description">
+            Antes de diseñar la propuesta agéntica, descomponemos las dos sentencias asignadas en sus datos de entrada, condiciones proposicionales y consecuencias estrictas.
+          </p>
+        </div>
+
+        <!-- Ficha R5 -->
+        <article class="sentence-card card-r5">
+          <div class="card-tag tag-primary">Sentencia 1 · Regla R5 (Bloque S13-C)</div>
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Concertación Unánime del Encuentro</h3>
+          
+          <div class="sentence-original-quote">
+            <p>“Si todas las personas participantes aceptaron la conexión y confirman la misma fecha, horario y modalidad para la versión vigente de una propuesta, el sistema registra esa versión del encuentro como acordada.”</p>
+          </div>
+
+          <div class="breakdown-grid">
+            <div class="breakdown-box">
+              <h5>01 · Datos Necesarios (Inputs)</h5>
+              <p>ID de propuesta, lista de participantes, estado booleano de conexión mutua, y votos individuales de fecha, hora y modalidad (presencial/virtual).</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>02 · Condición Lógica</h5>
+              <p><strong>Unanimidad estricta (AND):</strong> Todos aceptaron conexión ∧ Todos confirmaron exactamente la misma terna (fecha, horario, modalidad) para la versión vigente.</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>03 · Consecuencia Estricta</h5>
+              <p>El sistema cambia el estado del encuentro a <strong>"Acordado"</strong>, bloqueando esa versión y confirmándola formalmente en los calendarios.</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>04 · Supuesto Agregado por el Grupo</h5>
+              <p>Manejo de ventana temporal de expiración y derivación a <strong>intervención humana</strong> si falta un participante para sugerir franjas de coincidencia.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ficha R6 -->
+        <article class="sentence-card card-r6">
+          <div class="card-tag tag-secondary">Sentencia 2 · Regla R6 (Bloque S13-C)</div>
+          <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 8px;">Preservación de Acuerdo Previo y Control de Reprogramación</h3>
+          
+          <div class="sentence-original-quote">
+            <p>“Si alguien propone cambiar un encuentro acordado y todavía no todas las personas aceptaron esa nueva versión, el sistema solicita la conformidad pendiente y conserva el acuerdo anterior; la nueva versión solo reemplaza a la anterior cuando se cumple R5.”</p>
+          </div>
+
+          <div class="breakdown-grid">
+            <div class="breakdown-box">
+              <h5>01 · Datos Necesarios (Inputs)</h5>
+              <p>ID del encuentro ya acordado (Versión N), payload de la solicitud de cambio con nuevos datos (Versión N+1), y registro de conformidades de los demás.</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>02 · Condición Lógica</h5>
+              <p>Encuentro en estado "Acordado" ∧ Existe propuesta de cambio ∧ <strong>Aún no todas las personas aceptaron la nueva versión</strong>.</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>03 · Consecuencia Estricta</h5>
+              <p><strong>Doble efecto:</strong> Solicita conformidad pendiente a los restantes miembros Y <strong>conserva el acuerdo anterior</strong> sin mutarlo hasta que la nueva versión cumpla R5.</p>
+            </div>
+            <div class="breakdown-box">
+              <h5>04 · Supuesto Agregado por el Grupo</h5>
+              <p>Bloqueo de seguridad: Si faltan menos de 2 hs para la versión original y la nueva versión no reunió las firmas, se alerta al grupo y se cancela la votación para evitar ausencias.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sección 03: Propuesta 1 (Regla R5) -->
+    <section class="content-section" id="solucion-r5" aria-labelledby="section-sol1-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 03</span>
+          <h2 id="section-sol1-title" class="section-title">Solución Agéntica 01: StudySync Agent</h2>
+          <p class="section-description">
+            Automatización inteligente para alcanzar consensos unánimes en grupos de estudio sin intermediación manual ni discusiones circulares.
+          </p>
+        </div>
+
+        <div class="solution-box">
+          <span class="solution-badge">Propuesta Agéntica 01 · Regla R5</span>
+          <h3 class="solution-title">StudySync Agent · Conciliación Automática de Agenda y Consenso Unánime</h3>
+          <p class="solution-benefit">
+            <strong>Beneficio de la solución:</strong> Elimina las cadenas interminables de mensajes al auditar automáticamente la disponibilidad de los estudiantes que aceptaron conectar. Garantiza que ningún encuentro se confirme sin la aprobación unánime de fecha, horario y modalidad de todos los miembros del grupo. Brinda certeza total tanto para encuentros presenciales como virtuales, reservando de inmediato el espacio una vez consolidado el acuerdo.
+          </p>
+
+          <div class="card-grid" style="margin-top: 16px;">
+            <div class="card">
+              <span class="card-tag tag-primary">¿Qué hace el Agente?</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Recibe los parámetros sugeridos para el encuentro, verifica en tiempo real que las personas participantes mantengan su conexión activa y recopila de manera asincrónica la confirmación explícita de cada uno.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-tag tag-secondary">Herramientas que Consulta</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Consulta <code>StudentsRegistryAPI</code> para validar vínculos y perfiles, <code>ScheduleConsensusTool</code> para calcular la matriz de votos, y <code>CalendarIntegrationService</code> para generar la sala virtual o reserva física.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-tag tag-accent">Intervención Humana</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Si se detecta un rechazo explícito o expira el límite de respuesta, el agente no fuerza el acuerdo: presenta al grupo las franjas horarias con mayor solapamiento para que los estudiantes decidan manualmente una alternativa.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIAGRAMA DE FLUJO 01 (R5) -->
+        <div class="flowchart-wrapper" aria-label="Diagrama del flujo agéntico para la regla R5">
+          <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 8px;">Diagrama de Flujo Agéntico 01: Concertación Unánime (R5)</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Recorrido paso a paso: desde el ingreso de la propuesta hasta la confirmación como "Acordada" o la derivación humana.
+          </p>
+
+          <div class="flowchart-legend">
+            <div class="legend-item"><span class="legend-box box-start"></span> Evento / Inicio</div>
+            <div class="legend-item"><span class="legend-box box-tool"></span> Consulta a Herramienta</div>
+            <div class="legend-item"><span class="legend-box box-decision"></span> Decisión / Condición Lógica</div>
+            <div class="legend-item"><span class="legend-box box-action"></span> Acción & Resultado</div>
+            <div class="legend-item"><span class="legend-box box-human"></span> Intervención Humana (Excepción)</div>
+            <div class="legend-item"><span class="legend-box box-assumed"></span> Decisión de Diseño del Grupo</div>
+          </div>
+
+          <div class="flow-diagram">
+            <!-- Paso 1: Inicio -->
+            <div class="flow-step">
+              <div class="flow-node node-start">
+                <span class="flow-node-tag">Inicio / Evento</span>
+                <div class="flow-node-title">Llega propuesta de versión de encuentro</div>
+                <div class="flow-node-desc">Un participante crea una propuesta con: fecha, horario, modalidad y lista de integrantes.</div>
+                <span class="origin-badge badge-origin-rule">Viene de la Sentencia (R5)</span>
+              </div>
+            </div>
+
+            <div class="flow-arrow-down" aria-hidden="true"><div class="flow-arrow-line"></div><div class="flow-arrow-head"></div></div>
+
+            <!-- Paso 2: Herramienta -->
+            <div class="flow-step">
+              <div class="flow-node node-tool">
+                <span class="flow-node-tag">Herramienta · StudentsRegistryAPI</span>
+                <div class="flow-node-title">Agente consulta conexiones y respuestas</div>
+                <div class="flow-node-desc">Verifica si todos los integrantes aceptaron conectar y recopila las confirmaciones de fecha/hora/modalidad.</div>
+                <span class="origin-badge badge-origin-group">Propuesta del Grupo (Agente)</span>
+              </div>
+            </div>
+
+            <div class="flow-arrow-down" aria-hidden="true"><div class="flow-arrow-line"></div><div class="flow-arrow-head"></div></div>
+
+            <!-- Paso 3: Decisión Central -->
+            <div class="flow-step">
+              <div class="flow-node node-decision">
+                <span class="flow-node-tag">Decisión Lógica R5</span>
+                <div class="flow-node-title">¿Todas las personas aceptaron la conexión Y confirman la misma fecha, horario y modalidad?</div>
+                <div class="flow-node-desc">Se evalúa la conjunción de unanimidad sobre la versión vigente de la propuesta.</div>
+                <span class="origin-badge badge-origin-rule">Condición Estricta R5</span>
+              </div>
+            </div>
+
+            <!-- Ramificaciones SÍ / NO -->
+            <div class="flow-branches-container">
+              <!-- Rama SÍ -->
+              <div class="flow-branch">
+                <span class="branch-label label-yes">SÍ · Consenso Unánime ↓</span>
+                
+                <div class="flow-node node-action-success">
+                  <span class="flow-node-tag">Acción & Resultado</span>
+                  <div class="flow-node-title">Registrar encuentro como "Acordado"</div>
+                  <div class="flow-node-desc">El sistema marca la versión como acordada. Dispara <code>CalendarIntegrationService</code> para reservar sala/enlace y envía confirmación unánime.</div>
+                  <span class="origin-badge badge-origin-rule">Consecuencia R5</span>
+                </div>
+
+                <div class="flow-arrow-down" aria-hidden="true"><div class="flow-arrow-line"></div><div class="flow-arrow-head"></div></div>
+
+                <div class="flow-node" style="border: 1px solid var(--success); background: rgba(16, 185, 129, 0.1);">
+                  <div class="flow-node-title" style="color: #6ee7b7;">Encuentro Programado Exitosamente</div>
+                  <div class="flow-node-desc">Fin del flujo. Notificación de evento inmutable y enlace de estudio emitido a todos.</div>
+                </div>
+              </div>
+
+              <!-- Rama NO -->
+              <div class="flow-branch">
+                <span class="branch-label label-no">NO · Falta Acuerdo o Respuestas ↓</span>
+                
+                <div class="flow-node node-human">
+                  <span class="flow-node-tag">Alternativa & Caso Límite</span>
+                  <div class="flow-node-title">Mantener propuesta pendiente / Alertar demora</div>
+                  <div class="flow-node-desc">El sistema NO registra el encuentro como acordado. Agente monitorea plazo límite de respuesta (Supuesto).</div>
+                  <span class="origin-badge badge-origin-group">Decisión de Diseño del Grupo</span>
+                </div>
+
+                <div class="flow-arrow-down" aria-hidden="true"><div class="flow-arrow-line"></div><div class="flow-arrow-head"></div></div>
+
+                <div class="flow-node node-human">
+                  <span class="flow-node-tag">Intervención Humana (Nivel Propone)</span>
+                  <div class="flow-node-title">Derivación a Revisión Humana</div>
+                  <div class="flow-node-desc">Si vence el plazo o un estudiante rechaza: el agente presenta matriz de coincidencia horaria parcial y solicita a un participante redefinir la propuesta manualmente.</div>
+                  <span class="origin-badge badge-origin-group">Caso Excepción Resuelto</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desplegables de Detalles R5 -->
+        <div class="details-group">
+          <details class="custom-details" id="details-r5">
+            <summary class="custom-summary">
+              <div class="summary-title">
+                <span class="summary-badge">Detalle Operativo</span>
+                <span>Ficha Técnica Completa de la Solución R5 (StudySync Agent)</span>
+              </div>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="details-content">
+              <h4>¿Qué datos entran a la solución?</h4>
+              <ul class="details-list">
+                <li><strong>Identificador de la propuesta:</strong> Código único de sesión (ej. <code>#EM-402</code>).</li>
+                <li><strong>Listado de participantes:</strong> Matriz de IDs de los estudiantes convocados.</li>
+                <li><strong>Estado de conexión:</strong> Verificación de que cada par de estudiantes haya aceptado mutuamente la conexión en StudyMatch.</li>
+                <li><strong>Terna de parámetros:</strong> Fecha exacta (AAAA-MM-DD), horario de inicio/fin (HH:mm) y modalidad (Presencial o Virtual).</li>
+                <li><strong>Votos de confirmación:</strong> Registro atómico de la respuesta afirmativa de cada uno sobre la versión vigente.</li>
+              </ul>
+
+              <h4>¿Qué se decide y cómo actúa el agente?</h4>
+              <p>
+                El agente actúa como un conciliador algorítmico. Evalúa la condición booleana unánime: sólo cuando la cantidad de confirmaciones positivas coincide exactamente con el número total de participantes vinculados, se activa la transición de estado.
+              </p>
+
+              <div class="details-subbox">
+                <strong>Distinción de Supuestos:</strong> La sentencia original establece que ante la unanimidad, el sistema "registra esa versión del encuentro como acordada". Nuestro grupo añade como decisiones de diseño: la invocación a la herramienta de calendario para bloquear la agenda, el envío de notificaciones automáticas y el disparador de intervención humana cuando la votación queda estancada.
+              </div>
+
+              <h4>Casos de Recorrido Paso a Paso (Test Cases)</h4>
+              <div class="test-cases-grid">
+                <div class="test-case-card case-success">
+                  <div class="case-header">
+                    <span class="case-badge badge-success">Caso 1: Cumple Condición</span>
+                  </div>
+                  <h5 class="case-title">Consenso Unánime para "Álgebra Lineal"</h5>
+                  <ol class="case-step-list">
+                    <li><strong>Paso 1:</strong> 3 estudiantes conectados crean la propuesta para el Viernes a las 18:00 hs (Virtual).</li>
+                    <li><strong>Paso 2:</strong> Los 3 confirman afirmativamente la misma terna.</li>
+                    <li><strong>Paso 3:</strong> La condición unánime se cumple al 100%.</li>
+                    <li><strong>Resultado:</strong> El encuentro cambia a "Acordado", se genera el link de videollamada y finaliza con éxito.</li>
+                  </ol>
+                </div>
+
+                <div class="test-case-card case-exception">
+                  <div class="case-header">
+                    <span class="case-badge badge-warning">Caso 2: Caso Límite / No Cumple</span>
+                  </div>
+                  <h5 class="case-title">Falta de Respuesta e Incompatibilidad</h5>
+                  <ol class="case-step-list">
+                    <li><strong>Paso 1:</strong> 4 estudiantes reciben propuesta para Sábado 10:00 hs (Presencial).</li>
+                    <li><strong>Paso 2:</strong> 2 aceptan, 1 rechaza por superposición de cursada y 1 no responde.</li>
+                    <li><strong>Paso 3:</strong> La condición no se cumple. El encuentro NO se registra como acordado.</li>
+                    <li><strong>Intervención Humana:</strong> El agente detecta la falta de consenso a 24 hs del evento y envía sugerencias de horarios alternativos a los alumnos para renegociación.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 04: Propuesta 2 (Regla R6) -->
+    <section class="content-section" id="solucion-r6" aria-labelledby="section-sol2-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 04</span>
+          <h2 id="section-sol2-title" class="section-title">Solución Agéntica 02: RescheduleGuard Agent</h2>
+          <p class="section-description">
+            Gestión no destructiva de reprogramaciones: protección del acuerdo previo, solicitud de conformidad y reemplazo condicionado a la regla R5.
+          </p>
+        </div>
+
+        <div class="solution-box">
+          <span class="solution-badge">Propuesta Agéntica 02 · Regla R6</span>
+          <h3 class="solution-title">RescheduleGuard Agent · Control de Versiones y Transición No Destructiva</h3>
+          <p class="solution-benefit">
+            <strong>Beneficio de la solución:</strong> Protege la estabilidad del grupo de estudio ante pedidos imprevistos de cambio de horario, evitando que un encuentro ya acordado quede suspendido en el vacío. Gestiona de forma aislada la votación de la nueva propuesta mientras blinda y mantiene vigente el compromiso pactado originalmente. Aplica la regla R5 para promover la nueva versión únicamente cuando hay consenso total, garantizando cero cancelaciones accidentales.
+          </p>
+
+          <div class="card-grid" style="margin-top: 16px;">
+            <div class="card">
+              <span class="card-tag tag-primary">¿Qué hace el Agente?</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Al recibir una solicitud de reprogramación sobre una versión acordada, bifurca el registro: preserva la Versión N intacta y abre la Versión N+1 en estado "Conformidad pendiente" para los demás integrantes.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-tag tag-secondary">Herramientas que Consulta</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Utiliza <code>VersionedMeetingStore</code> para aislar las versiones de agenda, <code>NotificationDispatcher</code> para enviar avisos accionables y <code>ConflictResolverTool</code> para verificar topes temporales.
+              </p>
+            </div>
+            <div class="card">
+              <span class="card-tag tag-accent">Intervención Humana</span>
+              <p style="font-size: 0.95rem; color: #cbd5e1;">
+                Si se acerca la hora del encuentro original pactado (ej. ventana crítica de 2 horas) y la nueva versión no fue aceptada por todos, el agente desestima el borrador, ratifica el horario original y avisa a los estudiantes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DIAGRAMA DE FLUJO 02 (R6) -->
+        <div class="flowchart-wrapper" aria-label="Diagrama del flujo agéntico para la regla R6">
+          <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 8px;">Diagrama de Flujo Agéntico 02: Reprogramación & Control de Versiones (R6)</h4>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px;">
+            Visualización del carril dual: el acuerdo anterior se conserva activo mientras la nueva versión requiere el cumplimiento estricto de R5 para sustituirlo.
+          </p>
+
+          <div class="flowchart-legend">
+            <div class="legend-item"><span class="legend-box box-start"></span> Evento de Reprogramación</div>
+            <div class="legend-item"><span class="legend-box box-assumed"></span> Decisión de Diseño del Grupo</div>
+            <div class="legend-item"><span class="legend-box box-tool"></span> Control de Versiones Dual</div>
+            <div class="legend-item"><span class="legend-box box-decision"></span> Evaluación R6 / R5</div>
+            <div class="legend-item"><span class="legend-box box-action"></span> Reemplazo o Conservación</div>
+            <div class="legend-item"><span class="legend-box box-human"></span> Intervención Humana (Caso Límite)</div>
+          </div>
+
+          <div class="lanes">
+              <div class="lane-head lane-a">Carril A · Versión N (protegida)</div>
+              <div class="lane-head lane-b">Carril B · Versión N+1 (borrador)</div>
+              <div class="lane-cell"><div class="flow-node node-action-success"><span class="flow-node-tag">Estado actual</span><div class="flow-node-title">Encuentro «Acordado» sigue vigente</div><div class="flow-node-desc">Versión N activa y bloqueada en las agendas desde el primer instante.</div><span class="origin-badge badge-origin-rule">Consecuencia R6</span></div></div>
+              <div class="lane-cell"><div class="flow-node node-start"><span class="flow-node-tag">Inicio / Evento</span><div class="flow-node-title">Alguien propone cambiar el encuentro</div><div class="flow-node-desc">Llegan nuevos datos: fecha, horario o modalidad (Versión N+1).</div><span class="origin-badge badge-origin-rule">Viene de la Sentencia (R6)</span></div></div>
+              <div class="lane-cell"><div class="flow-node node-tool"><span class="flow-node-tag">Conserva · VersionedMeetingStore</span><div class="flow-node-title">El acuerdo anterior se conserva intacto</div><div class="flow-node-desc">La versión N no se edita ni se suspende mientras se vota.</div><span class="origin-badge badge-origin-rule">Mandato estricto R6</span></div></div>
+              <div class="lane-cell"><div class="flow-node node-tool"><span class="flow-node-tag">Herramienta</span><div class="flow-node-title">Solicita la conformidad pendiente</div><div class="flow-node-desc">Avisa a quienes aún no aceptaron la nueva versión (NotificationDispatcher).</div><span class="origin-badge badge-origin-rule">Consecuencia R6</span></div></div>
+              <div class="lane-cell span"><div class="flow-node node-decision"><span class="flow-node-tag">Decisión Lógica R6 ➔ R5</span><div class="flow-node-title">¿Todas las personas aceptaron la nueva versión (se cumple R5)?</div><div class="flow-node-desc">Solo en ese caso la Versión N+1 puede reemplazar a la N.</div><span class="origin-badge badge-origin-rule">Condición de reemplazo R6</span></div></div>
+              <div class="lane-cell last"><span class="branch-label label-no">NO · Faltan aceptaciones</span><div class="flow-node node-human"><span class="flow-node-tag">Caso límite</span><div class="flow-node-title">Versión N sigue vigente · intervención humana</div><div class="flow-node-desc">Si alguien rechaza o faltan menos de 2 hs: se cierra el borrador, se ratifica la N y se alerta al grupo.</div><span class="origin-badge badge-origin-group">Decisión del Grupo (Nivel Propone)</span></div></div>
+              <div class="lane-cell last"><span class="branch-label label-yes">SÍ · Cumple R5</span><div class="flow-node node-action-success"><span class="flow-node-tag">Acción y resultado</span><div class="flow-node-title">N+1 reemplaza a N de forma atómica</div><div class="flow-node-desc">La anterior se archiva, N+1 queda «Acordada» y se re-sincronizan los calendarios.</div><span class="origin-badge badge-origin-rule">Regla R6 cumplida</span></div></div>
+            </div>
+        </div>
+
+        <!-- Desplegables de Detalles R6 -->
+        <div class="details-group">
+          <details class="custom-details" id="details-r6">
+            <summary class="custom-summary">
+              <div class="summary-title">
+                <span class="summary-badge">Detalle Operativo</span>
+                <span>Ficha Técnica Completa de la Solución R6 (RescheduleGuard Agent)</span>
+              </div>
+              <span class="summary-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="details-content">
+              <h4>¿Qué datos entran a la solución?</h4>
+              <ul class="details-list">
+                <li><strong>Registro de encuentro acordado:</strong> Versión N activa, fecha y sala asignada.</li>
+                <li><strong>Solicitante del cambio:</strong> ID del estudiante que propone la reprogramación.</li>
+                <li><strong>Nuevos parámetros de la Versión N+1:</strong> Nueva fecha, hora o modalidad sugerida.</li>
+                <li><strong>Padrón de conformidades pendientes:</strong> Matriz de firmas recibidas vs. firmas pendientes de los restantes miembros.</li>
+              </ul>
+
+              <h4>¿Qué se decide y cómo actúa el agente?</h4>
+              <p>
+                El agente gestiona una máquina de estados no destructiva. Nunca sobrescribe la Versión N hasta que la Versión N+1 satisfaga todas las condiciones de R5. Mientras falte una sola firma, el acuerdo anterior continúa siendo la verdad oficial del sistema.
+              </p>
+
+              <div class="details-subbox">
+                <strong>Distinción de Supuestos:</strong> La sentencia R6 no explicita qué ocurre si un participante rechaza el cambio o si se vence el horario pactado originalmente. Nuestro grupo estableció como decisión de diseño que ante el rechazo o cercanía de la fecha original, se da de baja la solicitud de cambio para dar certeza y se activa una alerta humana directa.
+              </div>
+
+              <h4>Casos de Recorrido Paso a Paso (Test Cases)</h4>
+              <div class="test-cases-grid">
+                <div class="test-case-card case-success">
+                  <div class="case-header">
+                    <span class="case-badge badge-success">Caso 1: Cambio Consensuado (Cumple R5)</span>
+                  </div>
+                  <h5 class="case-title">Pase de Viernes a Sábado Aprobado</h5>
+                  <ol class="case-step-list">
+                    <li><strong>Paso 1:</strong> Encuentro acordado para Viernes 19 hs (Versión 1).</li>
+                    <li><strong>Paso 2:</strong> Carlos propone cambiar al Sábado 11 hs (Versión 2).</li>
+                    <li><strong>Paso 3:</strong> La Versión 1 se mantiene activa mientras los otros 2 miembros votan.</li>
+                    <li><strong>Paso 4:</strong> Ambos aceptan ➔ Se cumple R5 ➔ La Versión 2 reemplaza formalmente a la Versión 1.</li>
+                  </ol>
+                </div>
+
+                <div class="test-case-card case-exception">
+                  <div class="case-header">
+                    <span class="case-badge badge-warning">Caso 2: Conflicto & Retención</span>
+                  </div>
+                  <h5 class="case-title">Rechazo de Cambio y Protección del Acuerdo</h5>
+                  <ol class="case-step-list">
+                    <li><strong>Paso 1:</strong> Encuentro acordado para Jueves 17 hs presencial (Versión 1).</li>
+                    <li><strong>Paso 2:</strong> Elena propone cambiar al Viernes 21 hs (Versión 2).</li>
+                    <li><strong>Paso 3:</strong> Un integrante rechaza por cursada superpuesta.</li>
+                    <li><strong>Intervención Humana:</strong> El agente no reemplaza la versión. Cierra el borrador de la Versión 2, ratifica a todos que la Versión 1 del Jueves sigue 100% vigente y notifica a Elena.</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 05: Simulador Interactivo de Recorridos -->
+    <section class="content-section" id="simulador" aria-labelledby="section-sim-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 05</span>
+          <h2 id="section-sim-title" class="section-title">Simulador Interactivo de Recorridos</h2>
+          <p class="section-description">
+            Pruebe interactivamente cómo reacciona el agente frente a diferentes eventos de entrada, evaluando la condición lógica y visualizando los pasos de ejecución.
+          </p>
+        </div>
+
+        <div class="simulator-panel">
+          <div class="simulator-header">
+            <div>
+              <h3 id="sim-scenario-title" style="color: #fff; font-size: 1.2rem; font-weight: 700;">
+                R5 · Escenario Exitoso (Consenso Unánime) — [Regla R5 (StudySync Agent)]
+              </h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem;">Seleccione un escenario para observar la traza de ejecución del agente en tiempo real:</p>
+            </div>
+
+            <div class="simulator-tabs" role="tablist" aria-label="Escenarios de prueba">
+              <button type="button" class="sim-tab-btn active" data-scenario="r5_success">R5: Consenso (SÍ)</button>
+              <button type="button" class="sim-tab-btn" data-scenario="r5_exception">R5: Incompatibilidad (NO)</button>
+              <button type="button" class="sim-tab-btn" data-scenario="r6_success">R6: Reemplazo R5 (SÍ)</button>
+              <button type="button" class="sim-tab-btn" data-scenario="r6_exception">R6: Retención Versión (NO)</button>
+            </div>
+          </div>
+
+          <div class="simulator-console" aria-live="polite">
+            <div class="console-topbar">
+              <div class="console-dots">
+                <span class="console-dot red" aria-hidden="true"></span>
+                <span class="console-dot yellow" aria-hidden="true"></span>
+                <span class="console-dot green" aria-hidden="true"></span>
+              </div>
+              <span>agent-terminal://studymatch/flow-audit</span>
+              <span>Modo: Simulador de Lógica</span>
+            </div>
+            
+            <div class="console-log" id="sim-console-output">
+              <!-- Logs generados dinámicamente por app.js -->
+            </div>
+          </div>
+
+          <div class="simulator-controls">
+            <button type="button" class="btn-sim-action" id="btn-toggle-all-details">
+              Expandir todos los desplegables ↓
+            </button>
+            <a href="#solucion-r5" class="btn-sim-action">
+              Revisar Diagrama R5 ↑
+            </a>
+            <a href="#solucion-r6" class="btn-sim-action">
+              Revisar Diagrama R6 ↑
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 06: Identidad del Equipo (<EquipoDev/>) -->
+    <section class="content-section" id="equipo" aria-labelledby="section-team-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 06</span>
+          <h2 id="section-team-title" class="section-title">El Equipo: &lt;EquipoDev/&gt;</h2>
+          <p class="section-description">
+            Presentamos a nuestro grupo del IFTS 29 como un estudio de soluciones agénticas. Cinco integrantes, un flujo colaborativo y aportes concretos en la construcción del proyecto.
+          </p>
+        </div>
+
+        <!-- Identidad Opcional del Grupo -->
+        <div style="display: flex; align-items: center; gap: 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 20px 24px; border-radius: var(--radius-lg); margin-bottom: 28px;">
+          <img src="./assets/team-logo.svg" alt="Logo de identidad propia del grupo &lt;EquipoDev/&gt;" width="180" height="54" style="flex-shrink: 0;">
+          <div>
+            <h4 style="color: #fff; font-size: 1.1rem; margin-bottom: 4px;">Identidad Propia del Grupo (Opcional)</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+              Representamos a <strong>&lt;EquipoDev/&gt;</strong> (Grupo 08) como la consultora agéntica que diseña e implementa la propuesta para <strong>StudyMatch.</strong> (startup destinataria con su logo original).
+            </p>
+          </div>
+        </div>
+
+        <!-- Fichas de los 5 integrantes -->
+        <div class="team-grid">
+          <!-- Martina -->
+          <article class="team-member-card">
+            <div class="member-header">
+              <div class="member-avatar">MB</div>
+              <div>
+                <h4 class="member-name">Martina Bistagnino</h4>
+                <a href="https://github.com/Martina-bistagnino" target="_blank" rel="noopener noreferrer" class="member-handle">@Martina-bistagnino</a>
+              </div>
+            </div>
+            <span class="member-role">UX/UI & Accesibilidad</span>
+            <p class="member-contribution">
+              Diseño de la paleta institucional, jerarquía tipográfica, contraste accesible y semántica de desplegables interactivos con navegación por teclado.
+            </p>
+          </article>
+
+          <!-- Gabriela Dalila -->
+          <article class="team-member-card">
+            <div class="member-header">
+              <div class="member-avatar">GC</div>
+              <div>
+                <h4 class="member-name">Gabriela D. Contrera</h4>
+                <a href="https://github.com/DalilaContrera" target="_blank" rel="noopener noreferrer" class="member-handle">@DalilaContrera</a>
+              </div>
+            </div>
+            <span class="member-role">Lógica Proposicional & Datos</span>
+            <p class="member-contribution">
+              Desarme formal de las sentencias R5 y R6, especificación de las matrices de entrada y formulación de los casos de prueba positivos y negativos.
+            </p>
+          </article>
+
+          <!-- Jorge -->
+          <article class="team-member-card">
+            <div class="member-header">
+              <div class="member-avatar">JC</div>
+              <div>
+                <h4 class="member-name">Jorge Gabriel Caliz</h4>
+                <a href="https://github.com/JorgeGabrielCaliz" target="_blank" rel="noopener noreferrer" class="member-handle">@JorgeGabrielCaliz</a>
+              </div>
+            </div>
+            <span class="member-role">Documentación & Bitácora IA</span>
+            <p class="member-contribution">
+              Redacción del README técnico, registro de herramientas y modelos de IA utilizados, y documentación del ciclo de iteración con Antigravity.
+            </p>
+          </article>
+
+          <!-- Francisco Luis -->
+          <article class="team-member-card">
+            <div class="member-header">
+              <div class="member-avatar">FB</div>
+              <div>
+                <h4 class="member-name">Francisco Luis Bronzi</h4>
+                <a href="https://github.com/LuisUnix2100" target="_blank" rel="noopener noreferrer" class="member-handle">@LuisUnix2100</a>
+              </div>
+            </div>
+            <span class="member-role">Arquitectura Web & Rendimiento</span>
+            <p class="member-contribution">
+              Estructura HTML5 semántica, modularización de hojas de estilo, optimización de assets e integración de eventos para el simulador interactivo.
+            </p>
+          </article>
+
+          <!-- Martín -->
+          <article class="team-member-card">
+            <div class="member-header">
+              <div class="member-avatar">MR</div>
+              <div>
+                <h4 class="member-name">Martín Roige</h4>
+                <a href="https://github.com/TinchoHub" target="_blank" rel="noopener noreferrer" class="member-handle">@TinchoHub</a>
+              </div>
+            </div>
+            <span class="member-role">Flujos Agénticos & Coordinación</span>
+            <p class="member-contribution">
+              Coordinación técnica de las instrucciones al agente, modelado de los dos diagramas de flujo agénticos, testing en desktop y validación cruzada.
+            </p>
+          </article>
+        </div>
+
+        <!-- Evidencia de Revisión y Mejora Colaborativa (Nivel Propone) -->
+        <div class="callout" style="margin-top: 32px; border-left-color: var(--success);">
+          <h3 class="callout-title" style="color: #6ee7b7;">
+            <span aria-hidden="true">🤝</span>
+            Revisión entre Integrantes y Mejora Concreta (Nivel Propone)
+          </h3>
+          <p>
+            Durante la revisión interna entre pares (Martina, Jorge y Martín), detectamos que en el borrador inicial del Flujo 2 (R6) el usuario podía asumir erróneamente que la versión original del encuentro se cancelaba inmediatamente al proponer una reprogramación.
+          </p>
+          <p style="margin-top: 8px;">
+            <strong>Mejora implementada:</strong> Diseñamos explícitamente el concepto de <em>"Carril Dual de Versiones"</em>: el diagrama y la landing ahora muestran que la Versión N se mantiene protegida e inmutable en el calendario oficial mientras la Versión N+1 se procesa en paralelo. Asimismo, agregamos el simulador interactivo de consola para que cualquier evaluador pueda verificar este comportamiento en tiempo real.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 07: Rúbrica de Evaluación -->
+    <section class="content-section" id="rubrica" aria-labelledby="section-rubric-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">Sección 07</span>
+          <h2 id="section-rubric-title" class="section-title">Rúbrica y Autoevaluación</h2>
+          <p class="section-description">
+            Evaluación sin nota numérica (Aprobado / Desaprobado) basada en los criterios oficiales. Contrastación de cumplimiento orientado al nivel máximo: <strong>Propone</strong>.
+          </p>
+        </div>
+
+        <div class="rubric-table-wrapper">
+          <table class="rubric-table">
+            <thead>
+              <tr>
+                <th scope="col">Criterio Oficial</th>
+                <th scope="col">Nivel Cumple</th>
+                <th scope="col">Nivel Propone (Nuestro Alcance)</th>
+                <th scope="col">Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>01 · Participación del Grupo</strong></td>
+                <td>Todos participan, pueden explicar la propuesta y registran sus aportes en el README.</td>
+                <td>Documentamos la revisión cruzada entre integrantes y la mejora sustancial en la visualización del carril dual de R6.</td>
+                <td><span class="rubric-badge-level"><span class="rubric-check">✓</span> Propone</span></td>
+              </tr>
+              <tr>
+                <td><strong>02 · Repositorio & Landing</strong></td>
+                <td>Repositorio y sitio accesibles sin sesión; README con enlaces directos y claros.</td>
+                <td>README con instrucciones completas de ejecución local, verificación de navegación desktop y despliegue público sin fricción.</td>
+                <td><span class="rubric-badge-level"><span class="rubric-check">✓</span> Propone</span></td>
+              </tr>
+              <tr>
+                <td><strong>03 · Landing según Consigna</strong></td>
+                <td>Presenta StudyMatch. con logo original, 2 sentencias, propuestas y desplegables funcionales en desktop.</td>
+                <td>Organización visual impecable, navegación sticky accesible, tokens de diseño, simulación interactiva y modo responsive sin desbordes.</td>
+                <td><span class="rubric-badge-level"><span class="rubric-check">✓</span> Propone</span></td>
+              </tr>
+              <tr>
+                <td><strong>04 · Dos Flujos Agénticos</strong></td>
+                <td>Dos diagramas legibles con datos, decisiones, acciones y resultados; distingue supuestos agregados.</td>
+                <td>Explicación exhaustiva de casos límite y excepciones (incompatibilidad horaria y ventana crítica), con intervención humana modelada en ambos flujos.</td>
+                <td><span class="rubric-badge-level"><span class="rubric-check">✓</span> Propone</span></td>
+              </tr>
+              <tr>
+                <td><strong>05 · Herramientas de IA</strong></td>
+                <td>Identifica aplicación y modelo, usos y aportes del grupo; describe la construcción agéntica.</td>
+                <td>Evidencia documentada de iteración: instrucciones iniciales, problemas detectados (carril de versiones y contraste), correcciones pedidas y resultado final.</td>
+                <td><span class="rubric-badge-level"><span class="rubric-check">✓</span> Propone</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>StudyMatch. · Flujos Agénticos</h4>
+          <p>Desarrollo de Sistemas Web Front End · 2do Cuatrimestre 2026</p>
+          <p style="color: var(--text-dim); font-size: 0.82rem; margin-top: 4px;">Instituto de Formación Técnica Superior N.º 29 (IFTS 29) · CABA, Argentina</p>
+        </div>
+        <div>
+          <p style="font-weight: 700; color: #fff; margin-bottom: 6px;">Docente:</p>
+          <p style="color: var(--text-muted);">Prof. Luciano Ariel Martinez</p>
+          <p style="font-weight: 700; color: #fff; margin-top: 10px; margin-bottom: 6px;">Entrega:</p>
+          <p style="color: var(--text-muted);">26 de Noviembre de 2026</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Construcción 100% Agéntica con Antigravity IDE (Gemini 3.8 Flash) y Claude ([COMPLETAR MODELO DE CLAUDE]). Lógica original provista por estudiantes del IFTS 16.</p>
+        <p>&copy; 2026 &lt;EquipoDev/&gt; · Grupo 08 · Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./js/app.js"></script>
+  <script src="./js/cielo.js"></script>
+  <script src="./js/interaccion.js"></script>
+</body>
+</html>

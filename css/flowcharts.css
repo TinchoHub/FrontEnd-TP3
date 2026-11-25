@@ -1,0 +1,282 @@
+/* ==========================================================================
+   flowcharts.css - Agentic Workflow Diagrams Styling
+   Proyecto: TP3 · Dos sentencias, dos soluciones · IFTS 29
+   Startup: StudyMatch. | Bloque: S13-C
+   ========================================================================== */
+
+.flowchart-wrapper {
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  margin: 28px 0;
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.flowchart-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+}
+
+.flowchart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+}
+
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.legend-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legend-box.box-start { background: #3b82f6; }
+.legend-box.box-decision { background: #8b5cf6; }
+.legend-box.box-tool { background: #06b6d4; }
+.legend-box.box-action { background: #10b981; }
+.legend-box.box-human { background: #f43f5e; }
+.legend-box.box-assumed { 
+  background: rgba(255, 255, 255, 0.05); 
+  border: 1px dashed #f59e0b; 
+}
+
+/* Flowchart Tree Container */
+.flow-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Individual Flow Nodes */
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.flow-node {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 22px;
+  text-align: center;
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.flow-node:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.flow-node-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 6px;
+}
+
+.flow-node-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.flow-node-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+/* Semantic Node Types */
+.flow-node.node-start {
+  border-left: 4px solid #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(17, 24, 39, 0.95) 100%);
+}
+.flow-node.node-start .flow-node-tag {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+}
+
+.flow-node.node-tool {
+  border-left: 4px solid #06b6d4;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(17, 24, 39, 0.95) 100%);
+}
+.flow-node.node-tool .flow-node-tag {
+  background: rgba(6, 182, 212, 0.2);
+  color: #67e8f9;
+}
+
+.flow-node.node-decision {
+  border: 2px solid #8b5cf6;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(17, 24, 39, 0.95) 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+.flow-node.node-decision .flow-node-tag {
+  background: rgba(139, 92, 246, 0.3);
+  color: #d8b4fe;
+}
+
+.flow-node.node-action-success {
+  border-left: 4px solid var(--success);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(17, 24, 39, 0.95) 100%);
+}
+.flow-node.node-action-success .flow-node-tag {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+}
+
+.flow-node.node-human {
+  border-left: 4px solid #f43f5e;
+  background: linear-gradient(135deg, rgba(244, 63, 94, 0.12) 0%, rgba(17, 24, 39, 0.95) 100%);
+}
+.flow-node.node-human .flow-node-tag {
+  background: rgba(244, 63, 94, 0.25);
+  color: #fda4af;
+}
+
+.flow-node.node-assumed {
+  border: 1px dashed #f59e0b;
+}
+
+/* Connectors / Arrows */
+.flow-arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 38px;
+  position: relative;
+}
+
+.flow-arrow-line {
+  width: 2px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.flow-arrow-head {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid rgba(255, 255, 255, 0.4);
+  margin-top: -2px;
+}
+
+/* Branching Split (SÍ / NO) */
+.flow-branches-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+}
+
+.flow-branches-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.flow-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.branch-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.branch-label.label-yes {
+  background: var(--success-dark);
+  color: #a7f3d0;
+  border: 1px solid var(--success);
+}
+
+.branch-label.label-no {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fde68a;
+  border: 1px solid #f59e0b;
+}
+
+/* Distinción Formal: Sentencia vs Supuesto */
+.origin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.origin-badge.badge-origin-rule {
+  background: rgba(99, 102, 241, 0.15);
+  color: #c7d2fe;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.origin-badge.badge-origin-group {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fde68a;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Responsividad de Diagramas */
+@media (max-width: 768px) {
+  .flow-branches-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .flow-branches-container::before {
+    display: none;
+  }
+}
