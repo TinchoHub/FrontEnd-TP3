@@ -11,8 +11,8 @@
 ---
 
 ## 🌐 Enlaces del Proyecto
-* **Landing Page Publicada:** [https://tp3-frontend-grupal-grupo08.vercel.app/](https://tp3-frontend-grupal-grupo08.vercel.app/) *(Accesible públicamente sin sesión)*
-* **Repositorio en GitHub:** [https://github.com/LuisUnix2100/tp3-frontend-grupal](https://github.com/LuisUnix2100/tp3-frontend-grupal)
+* **Landing Page Publicada:** [https://frontend-tp3.vercel.app/](https://frontend-tp3.vercel.app/) *(Accesible públicamente sin sesión)*
+* **Repositorio en GitHub:** [https://github.com/TinchoHub/FrontEnd-TP3](https://github.com/TinchoHub/FrontEnd-TP3)
 
 ---
 
